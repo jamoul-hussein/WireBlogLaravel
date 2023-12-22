@@ -8,7 +8,7 @@
     <section class="layout">
         <div class="sidebar">
 
-            <h1 class="text-center">Xtra Blog</h1>
+            <h1 class="text-center">Wire Blog</h1>
 
             <nav class="sidebar-nav" id="sidebar-nav">
                 <ul>
