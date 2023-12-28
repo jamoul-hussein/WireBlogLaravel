@@ -18,7 +18,7 @@
                         </a></li>
                     <li class="sidebar-nav-item"><a href="about.html" class="sidebar-nav-link">
                             <i class="fas fa-users"></i>
-                            About Xtra
+                            About Wire
                         </a></li>
                     <li class="sidebar-nav-item"><a href="contact.html" class="sidebar-nav-link">
                             <i class="far fa-comments"></i>
@@ -34,7 +34,7 @@
 
                 @foreach($abstractBlogs as $abstractBlog)
                     @include('components.abstract-blog' , [
-                            'abstractBlogId' => $abstractBlog->id,
+                             'abstractBlogId' => $abstractBlog->id,
                              'abstractBlogName' => $abstractBlog->name,
                              'abstractBlogDescription' => $abstractBlog->description,
                              'abstractBlogCategory'=>  $abstractBlog->category,
