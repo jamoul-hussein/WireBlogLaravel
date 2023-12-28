@@ -31,19 +31,17 @@
 
         <div class="body">
             <div class="abstract-blogs-container">
-                <div class="abstract-blog">
-                    <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg">
-                    <h2>sadsad</h2>
-                    <p>sadsadsadsadasdsadsadsadsadsadsadasdasdaklmlaskdmkaslm</p>
-                    <div>category: programming</div>
-                    <hr>
-                    <div>created at 02.02.2022</div>
-                </div>
-                <div class="abstract-blog">
-                    <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg">
-                    <h2>sadsad</h2>
-                    <p>sadsadsadsadasdsadsadsadsadsadsadasdasdaklmlaskdmkaslm</p>
-                </div>
+
+                @foreach($abstractBlogs as $abstractBlog)
+                    @include('components.abstract-blog' , [
+                            'abstractBlogId' => $abstractBlog->id,
+                             'abstractBlogName' => $abstractBlog->name,
+                             'abstractBlogDescription' => $abstractBlog->description,
+                             'abstractBlogCategory'=>  $abstractBlog->category,
+                             'abstractBlogCreatedAt' => $abstractBlog->created_at,
+                    ])
+                @endforeach
+
             </div>
         </div>
     </section>
