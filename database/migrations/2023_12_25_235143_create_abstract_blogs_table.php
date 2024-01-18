@@ -13,10 +13,15 @@ return new class extends Migration
     {
         Schema::create('abstract_blogs', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('description');
-            $table->string('category');
-            $table->timestamps();
+            $table->string('name')->nullable();
+            $table->string('description')->nullable();
+            $table->string('category')->nullable();
+            $table->unsignedBigInteger('concrete_blogs_id')->nullable();
+
+            $table->foreign('concrete_blogs_id')
+                ->references('id')
+                ->on('concrete_blogs')
+                ->onDelete('cascade');
         });
     }
 
