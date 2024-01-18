@@ -4,5 +4,5 @@
     <p>{{$abstractBlogDescription}}</p>
     <div>category: {{$abstractBlogCategory}}</div>
     <hr>
-    <div>created at 02.02.2022</div>
+    <div>created at {{$abstractBlogCreatedAt}}</div>
 </div>
