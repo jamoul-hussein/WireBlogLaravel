@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogPage\ConcreteBlogsController;
 use App\Http\Controllers\StartPageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-   return redirect('/startPage');
+    return redirect('/startPage');
 });
 
 Route::get('/dashboard', function () {
@@ -31,4 +32,6 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/startPage', [StartPageController::class, 'index'])->name('thissome');
 
-require __DIR__.'/auth.php';
+Route::get('/blog/{id}', [ConcreteBlogsController::class, 'index']);
+
+require __DIR__ . '/auth.php';
