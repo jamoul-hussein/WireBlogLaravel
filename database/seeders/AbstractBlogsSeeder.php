@@ -25,6 +25,7 @@ class AbstractBlogsSeeder extends Seeder
                 "name" => $data['0'],
                 "description" => $data['1'],
                 "category" => $data['2'],
+                "concrete_blogs_id" => $data['3'],
             ]);
         }
 

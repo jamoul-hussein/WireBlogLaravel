@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AbstractBlogs extends Model
+class ConcreteBlogs extends Model
 {
     use HasFactory;
 
-    protected $table = 'abstract_blogs';
+    protected $table = 'concrete_blogs';
 
     protected $fillable = [
-        'name', 'description', 'category', 'concrete_blogs_id'
+        'content'
     ];
 }
