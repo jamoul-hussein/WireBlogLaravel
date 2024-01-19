@@ -12,6 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('concrete_blogs', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->charset = 'utf8mb4';
+            $table->collation = 'utf8mb4_unicode_ci';
+
             $table->id();
             $table->text('content')->nullable();
             $table->timestamps();
@@ -23,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('concrete_blogs');
     }
 };
