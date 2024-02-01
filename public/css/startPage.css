@@ -89,4 +89,13 @@
     border-radius: 10px 10px 0 0;
 }
 
+.abstract-blog {
+    text-decoration: none;
+    color: #1a202c;
+}
+
+.abstract-blog:hover {
+    color: var(--pink);
+}
+
 
