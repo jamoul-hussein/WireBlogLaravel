@@ -9,6 +9,33 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/startPage.css') }}" >
 </head>
 <body>
+<section class="layout">
+    <div class="sidebar">
+
+        <h1 class="text-center">Wire Blog</h1>
+
+        <nav class="sidebar-nav" id="sidebar-nav">
+            <ul>
+                <li class="sidebar-nav-item active"><a href="index.html" class="sidebar-nav-link">
+                        <i class="fas fa-home"></i>
+                        Blog Home
+                    </a></li>
+                <li class="sidebar-nav-item"><a href="/post/blog" class="sidebar-nav-link">
+                        <i class="fas fa-pen"></i>
+                        Post a Blog
+                    </a></li>
+                <li class="sidebar-nav-item"><a href="about.html" class="sidebar-nav-link">
+                        <i class="fas fa-users"></i>
+                        About Wire
+                    </a></li>
+                <li class="sidebar-nav-item"><a href="contact.html" class="sidebar-nav-link">
+                        <i class="far fa-comments"></i>
+                        Contact Us
+                    </a></li>
+            </ul>
+        </nav>
+    </div>
+
        @yield('main')
 </body>
 </html>
