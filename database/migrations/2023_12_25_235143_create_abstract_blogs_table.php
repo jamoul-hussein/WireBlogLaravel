@@ -22,10 +22,16 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->string('category')->nullable();
             $table->unsignedBigInteger('concrete_blogs_id')->nullable();
+            $table->unsignedBigInteger('images_blogs_id')->nullable();
 
             $table->foreign('concrete_blogs_id')
                 ->references('id')
                 ->on('concrete_blogs')
+                ->onDelete('cascade');
+
+            $table->foreign('images_blogs_id')
+                ->references('id')
+                ->on('images_blogs')
                 ->onDelete('cascade');
         });
     }
