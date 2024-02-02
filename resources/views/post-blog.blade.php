@@ -3,32 +3,33 @@
 
 @section('main')
     <div class="post-blog">
-        {{$blogTitle}}
-        {{$blogImage}}
-        {{$blogCategory}}
-        {{$blogBody}}
+        {{--        {{$blogTitle}}--}}
+        {{--        {{$blogImage}}--}}
+        {{--        {{$blogCategory}}--}}
+        {{--        {{$blogBody}}--}}
         <h2>Post a Blog</h2>
-        <form action="{{ url("posts/") }}">
+        <form class="post-blog-form" action="{{ url("posts/") }}">
+            <label for="blog-title">Blog Title</label>
             <div class="blog-title-container">
-                <label for="blog-title">Blog Title</label>
+
                 <input type="text" id="blog-title" name="blogTitle" placeholder="Your blog title..">
             </div>
 
+            <label for="blog-image">Blog Image</label>
             <div class="blog-image-container">
-                <label for="blog-image">Blog Image</label>
                 <input type="text" id="blog-image" name="blogImage" placeholder="Your blog image..">
             </div>
 
+            <label for="blog-category">Blog Category</label>
             <div class="blog-category-container">
-                <label for="blog-category">Blog Category</label>
                 <input type="text" id="blog-category" name="blogCategory" placeholder="Your blog category..">
             </div>
 
+            <label for="blog-body">Blog body</label>
             <div class="blog-body-container">
-                <label for="blog-boy">Blog body</label>
-                <input type="text" id="blog-body" name="blogBody" placeholder="Your blog body..">
+                <textarea type="text" id="blog-body" name="blogBody" placeholder="Your blog body.."></textarea>
             </div>
-            <input type="submit" name="submitPost" value="Submit">
+            <input type="submit" class="submitPost" name="submitPost" value="Submit">
         </form>
     </div>
 @endsection
