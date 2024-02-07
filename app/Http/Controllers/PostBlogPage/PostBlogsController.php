@@ -3,14 +3,15 @@
 namespace App\Http\Controllers\PostBlogPage;
 
 use App\Http\Controllers\Controller;
+use App\Models\AbstractBlogs;
 use App\Models\ConcreteBlogs;
 
 class PostBlogsController extends Controller
 {
-    private string $blogTitle;
-    private string $blogImage;
-    private string $blogCategory;
-    private string $blogBody;
+    private ?string $blogTitle = null;
+    private ?string $blogImage = null;
+    private ?string $blogCategory = null;
+    private ?string $blogBody = null;
 
     public function index()
     {
@@ -36,14 +37,29 @@ class PostBlogsController extends Controller
             if (isset($_GET['blogBody'])) {
                 $this->setBlogBody($_GET['blogBody']);
             }
-
         }
 
+        $concreteBlogs = new ConcreteBlogs();
+        $concreteBlogs->content = $this->getBlogBody();
+        $concreteBlogs->save();
+
+        $concrete_blogs_id = $concreteBlogs->id;
+
+        var_dump($concrete_blogs_id);
+
+
+//        $abstractBlogs = AbstractBlogs::create([
+//            'name' => $this->getBlogTitle(),
+//            'description' => "sadas",
+//            'category' => $this->getBlogCategory(),
+//            'concrete_blogs_id'
+//        ]);
+
         return view('post-blog', [
-            'blogTitle' => $this->getBlogTitle(),
-            'blogImage' => $this->getBlogImage(),
-            'blogCategory' => $this->getBlogCategory(),
-            'blogBody' => $this->getBlogBody()
+            'blogTitle' => $this->getBlogTitle() ?? null,
+            'blogImage' => $this->getBlogImage() ?? null,
+            'blogCategory' => $this->getBlogCategory() ?? null,
+            'blogBody' => $this->getBlogBody() ?? null
         ]);
     }
 
