@@ -5,6 +5,7 @@ namespace App\Http\Controllers\PostBlogPage;
 use App\Http\Controllers\Controller;
 use App\Models\AbstractBlogs;
 use App\Models\ConcreteBlogs;
+use App\Models\ImagesBlogs;
 
 class PostBlogsController extends Controller
 {
@@ -43,17 +44,20 @@ class PostBlogsController extends Controller
         $concreteBlogs->content = $this->getBlogBody();
         $concreteBlogs->save();
 
-        $concrete_blogs_id = $concreteBlogs->id;
+        $imagesBlogs = new ImagesBlogs();
+        $imagesBlogs->image_link = $this->getBlogImage();
+        $imagesBlogs->save();
 
-        var_dump($concrete_blogs_id);
+        $concrete_blog_id = $concreteBlogs->id;
+        $image_blog_id = $imagesBlogs->id;
 
 
-//        $abstractBlogs = AbstractBlogs::create([
-//            'name' => $this->getBlogTitle(),
-//            'description' => "sadas",
-//            'category' => $this->getBlogCategory(),
-//            'concrete_blogs_id'
-//        ]);
+        $abstractBlogs = new AbstractBlogs();
+        $abstractBlogs->description = $this->getBlogTitle();
+        $abstractBlogs->category = $this->getBlogTitle();
+        $abstractBlogs->concrete_blogs_id = $concrete_blog_id;
+        $abstractBlogs->images_blogs_id = $image_blog_id;
+        $abstractBlogs->save();
 
         return view('post-blog', [
             'blogTitle' => $this->getBlogTitle() ?? null,

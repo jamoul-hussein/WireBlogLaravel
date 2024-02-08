@@ -39,6 +39,7 @@ class MigrateInOrder extends Command
     {
         $migrations = [
             '2024_01_18_221634_concrete_blogs.php',
+            '2024_02_02_191509_images_blogs.php',
             '2023_12_25_235143_create_abstract_blogs_table.php',
         ];
 
@@ -46,7 +47,7 @@ class MigrateInOrder extends Command
             $basePath = 'database/migrations/';
             $migrationName = trim($migration);
             $path = $basePath . $migrationName;
-            $this->call('migrate:refresh', [
+            $this->call('migrate', [
                 '--path' => $path,
             ]);
         }

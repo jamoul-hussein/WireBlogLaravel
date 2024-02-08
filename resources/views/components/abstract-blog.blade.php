@@ -5,4 +5,7 @@
     <div>category: {{$abstractBlogCategory}}</div>
     <hr>
     <div>created at {{$abstractBlogCreatedAt}}</div>
+    @foreach($imagesBlogs as $imagesBlog)
+        <h1>$imagesBlog</h1>
+    @endforeach
 </a>

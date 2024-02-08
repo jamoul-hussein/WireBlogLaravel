@@ -33,7 +33,11 @@ return new class extends Migration
                 ->references('id')
                 ->on('images_blogs')
                 ->onDelete('cascade');
+
+            $table->timestamps();
         });
+
+
     }
 
     /**

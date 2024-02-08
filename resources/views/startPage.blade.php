@@ -2,8 +2,16 @@
 
 @section('main')
         <div class="body">
-            <div class="abstract-blogs-container">
 
+
+            @foreach($imagesBlogs as $imagesBlog)
+                <h1>{{$imagesBlog->image_link}}</h1>
+                {{$abstractBlogs}}
+            @endforeach
+
+
+            <div class="abstract-blogs-container">
+            @if($abstractBlogs)
                 @foreach($abstractBlogs as $abstractBlog)
                     @include('components.abstract-blog' , [
                              'abstractBlogId' => $abstractBlog->id,
@@ -13,6 +21,7 @@
                              'abstractBlogCreatedAt' => $abstractBlog->created_at,
                     ])
                 @endforeach
+                @endif
 
             </div>
         </div>
