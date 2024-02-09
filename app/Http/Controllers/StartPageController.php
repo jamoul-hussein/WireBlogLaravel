@@ -8,14 +8,13 @@ use Illuminate\Http\Request;
 
 class StartPageController extends Controller
 {
+
     public function index(Request $request)
     {
-        $abstractBlogs = AbstractBlogs::all();
-        $imagesBlogs = ImagesBlogs::all();
+        $abstractBlogs = AbstractBlogs::with('imagesBlog')->get();
 
         return view('startPage', [
             'abstractBlogs' => $abstractBlogs,
-            'imagesBlogs' => $imagesBlogs,
         ]);
     }
 }

@@ -12,6 +12,11 @@ class AbstractBlogs extends Model
     protected $table = 'abstract_blogs';
 
     protected $fillable = [
-        'name', 'description', 'category', 'concrete_blogs_id'
+        'name', 'description', 'category', 'concrete_blogs_id', 'images_blogs_id'
     ];
+
+    public function imagesBlog()
+    {
+        return $this->belongsTo(ImagesBlogs::class, 'images_blogs_id');
+    }
 }
