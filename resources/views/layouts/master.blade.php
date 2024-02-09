@@ -16,19 +16,19 @@
 
         <nav class="sidebar-nav" id="sidebar-nav">
             <ul>
-                <li class="sidebar-nav-item active"><a href="index.html" class="sidebar-nav-link">
-                        <i class="fas fa-home"></i>
+                <li class="sidebar-nav-item active"><a href="/startPage" class="sidebar-nav-link">
+                        <i></i>
                         Blog Home
                     </a></li>
                 <li class="sidebar-nav-item"><a href="/post/blog" class="sidebar-nav-link">
-                        <i class="fas fa-pen"></i>
+                        <i></i>
                         Post a Blog
                     </a></li>
-                <li class="sidebar-nav-item"><a href="about.html" class="sidebar-nav-link">
-                        <i class="fas fa-users"></i>
+                <li class="sidebar-nav-item"><a href="/" class="sidebar-nav-link">
+                        <i></i>
                         About Wire
                     </a></li>
-                <li class="sidebar-nav-item"><a href="contact.html" class="sidebar-nav-link">
+                <li class="sidebar-nav-item"><a href="/" class="sidebar-nav-link">
                         <i class="far fa-comments"></i>
                         Contact Us
                     </a></li>
