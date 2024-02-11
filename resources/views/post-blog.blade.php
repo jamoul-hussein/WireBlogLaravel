@@ -7,8 +7,8 @@
         {{--        {{$blogImage}}--}}
         {{--        {{$blogCategory}}--}}
         {{--        {{$blogBody}}--}}
-        <h2>Post a Blog</h2>
         <form class="post-blog-form" action="{{ url("posts/") }}">
+            <h2>Post a Blog</h2>
             <label for="blog-title">Blog Title</label>
             <div class="blog-title-container">
 
