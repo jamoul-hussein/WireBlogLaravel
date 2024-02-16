@@ -9,69 +9,95 @@
     --pink: #EDA4BD
 }
 
-.post-blog {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+.post-blog-body {
     width: 100%;
     height: 100%;
+    background-image: linear-gradient(rgba(235, 63, 255, 0.5), rgba(0, 0, 0, 0.97)), url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg&ga=GA1.1.87170709.1707609600&semt=sph") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-blog-form .blog-title-container,
+.post-blog-form .blog-image-container,
+.post-blog-form .blog-category-container,
+.post-blog-form .blog-body-container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.post-blog-form label {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.post-blog-form h2 {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
 }
 
 
-/*label {*/
-/*    font-size: 1.2rem;*/
-/*    margin-right: 1rem;*/
-/*}*/
-
-input {
-    font-size: 3rem;
-    height: 3rem;
-    width: 34rem;
+.post-blog-form input {
+    font-size: 1.5rem;
+    height: 30%;
+    width: 80%;
     border-style: solid;
-    border-width: 4px;
+    border-width: 1px;
     border-color: #1a202c;
     border-radius: 10px;
-    /*padding: 10px;*/
 
 }
 
-input:focus {
+.post-blog-form input:focus {
     border-color: rgba(97, 34, 189, 0.39);
 }
 
-textarea {
-    font-size: 2rem;
-    padding-right: 18rem;
+.post-blog-form textarea {
+    height: 80%;
+    width: 80%;
+    padding: 5px;
+    font-size: 1.5rem;
     border-style: solid;
-    border-width: 3px;
+    border-width: 1px;
     border-color: #1a202c;
     border-radius: 10px;
 }
 
-.blog-body-container {
-    /*height: 4rem;*/
-    /*width: 14rem;*/
-}
-
-textarea:focus {
+.post-blog-form textarea:focus {
     border-color: rgba(97, 34, 189, 0.39);
 }
 
 .post-blog-form {
-    min-width: 100%;
-    min-height: 100%;
+    width: 70%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(rgba(235, 63, 255, 0.5), rgba(0, 0, 0, 0.97)), url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg&ga=GA1.1.87170709.1707609600&semt=sph") !important;
-    background-color: #cccccc;
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 40px;
+    background: rgba(28, 27, 27, 0.62);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
 }
 
-.blog-title {
-
+.submitPost:hover {
+    background: var(--thistle);
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px var(--thistle),
+    0 0 25px var(--thistle),
+    0 0 50px var(--thistle),
+    0 0 100px var(--thistle);
 }
 
+body {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+}
