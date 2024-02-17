@@ -22,7 +22,13 @@
 
 .post-blog-form .blog-title-container,
 .post-blog-form .blog-image-container,
-.post-blog-form .blog-category-container,
+.post-blog-form .blog-category-container {
+    display: flex;
+    justify-content: center;
+    height: 30%;
+    width: 100%;
+}
+
 .post-blog-form .blog-body-container {
     display: flex;
     justify-content: center;
@@ -44,7 +50,7 @@
 
 
 .post-blog-form input {
-    font-size: 1.5rem;
+    font-size: .8rem;
     height: 30%;
     width: 80%;
     border-style: solid;
@@ -58,11 +64,13 @@
     border-color: rgba(97, 34, 189, 0.39);
 }
 
+
+
 .post-blog-form textarea {
-    height: 80%;
+    height: 90%;
     width: 80%;
     padding: 5px;
-    font-size: 1.5rem;
+    font-size: .8rem;
     border-style: solid;
     border-width: 1px;
     border-color: #1a202c;
@@ -85,6 +93,10 @@
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
+}
+
+.submitPost {
+    height: 20% !important;
 }
 
 .submitPost:hover {
