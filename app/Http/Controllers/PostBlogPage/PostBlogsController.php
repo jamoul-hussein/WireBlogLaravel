@@ -36,7 +36,8 @@ class PostBlogsController extends Controller
             }
 
             if (isset($_GET['blogBody'])) {
-                $this->setBlogBody($_GET['blogBody']);
+                $blogBody = nl2br($_GET['blogBody']);
+                $this->setBlogBody($blogBody);
             }
         }
 

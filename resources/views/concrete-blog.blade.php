@@ -1,5 +1,5 @@
 <div class="mb-4">
-    {{$content}}
+    {!! $content !!}
     <h2 >Title Post </h2>
     <p>02.02.2022 posted by User</p>
     <p>
