@@ -1,7 +1,7 @@
 .body { grid-area: body; }
 
 :root {
-    --wenge: #5D576B;
+    --wenge: rgba(93, 87, 107, 0.2);
     --tropical-indigo: #8884FF;
     --thistle: #D7BCE8;
     --thistle-light: #E8CEE4;

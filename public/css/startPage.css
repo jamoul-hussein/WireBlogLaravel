@@ -1,4 +1,15 @@
-.body { grid-area: body; }
+html {
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+}
+
 
 :root {
     --wenge: #5D576B;
@@ -9,22 +20,24 @@
     --pink: #EDA4BD
 }
 
+
 .layout {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: grid;
     grid-template-areas: "sidebar body";
-    grid-template-columns: auto 1fr;
-    gap: 8px;
+    grid-template-columns: 15% [col-sidebar] 85% [col-body];
 }
+
 
 .sidebar {
     grid-area: sidebar;
     background-color: var(--wenge);
-    height: 100%;
     padding-top: 2rem;
-    box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
-
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75);
+    position: sticky;
+    top: 0;
+    height: 100%;
 }
 
 .sidebar h1 {
@@ -40,12 +53,12 @@
     justify-content: space-between;
 }
 
-.sidebar .sidebar-nav li{
+.sidebar .sidebar-nav li {
     list-style-type: none;
     margin-bottom: 3rem;
 }
 
-.sidebar .sidebar-nav li a{
+.sidebar .sidebar-nav li a {
     text-decoration: none;
     color: var(--pale-purple);
     font-size: 1.2rem;
@@ -54,9 +67,21 @@
     border-radius: 5px;
 }
 
-.sidebar .sidebar-nav li a:hover{
+.sidebar .sidebar-nav li a:hover {
     color: var(--wenge);
     background-color: var(--pale-purple);
+}
+
+
+.body {
+    grid-area: body;
+    height: 90%;
+    width: 100%;
+}
+
+.body .account-bar {
+    height: 5%;
+    background-color: rgba(92, 87, 105, 0.3);
 }
 
 .body .abstract-blogs-container {
@@ -64,7 +89,7 @@
     grid-template-columns: 1fr 1fr;
     margin-left: 4rem;
     margin-right: 4rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
     column-gap: 4rem;
     row-gap: 3rem;
 }
@@ -74,7 +99,7 @@
     flex-direction: column;
     border-width: 0px 0px 4px 0px;
     border-style: solid;
-
+    height: 85%;
     border-color: var(--wenge);
 }
 
