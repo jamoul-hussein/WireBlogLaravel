@@ -41,17 +41,8 @@ class PostBlogsController extends Controller
             }
         }
 
-        $concreteBlogs = new ConcreteBlogs();
-        $concreteBlogs->content = $this->getBlogBody();
-        $concreteBlogs->save();
-
-        $imagesBlogs = new ImagesBlogs();
-        $imagesBlogs->image_link = $this->getBlogImage();
-        $imagesBlogs->save();
-
-        $concrete_blog_id = $concreteBlogs->id;
-        $image_blog_id = $imagesBlogs->id;
-
+        $concrete_blog_id = $this->saveContentIntoConcreteBlogs()->id;
+        $image_blog_id = $this->saveImageLinkIntoImageBlogs()->id;
 
         $abstractBlogs = new AbstractBlogs();
         $abstractBlogs->description = $this->getBlogTitle();
@@ -66,6 +57,25 @@ class PostBlogsController extends Controller
             'blogCategory' => $this->getBlogCategory() ?? null,
             'blogBody' => $this->getBlogBody() ?? null
         ]);
+    }
+
+
+    private function saveContentIntoConcreteBlogs(): ConcreteBlogs
+    {
+        $concreteBlogs = new ConcreteBlogs();
+        $concreteBlogs->content = $this->getBlogBody();
+        $concreteBlogs->save();
+
+        return $concreteBlogs;
+    }
+
+    private function saveImageLinkIntoImageBlogs(): ImagesBlogs
+    {
+        $imagesBlogs = new ImagesBlogs();
+        $imagesBlogs->image_link = $this->getBlogImage();
+        $imagesBlogs->save();
+
+        return $imagesBlogs;
     }
 
     /**
