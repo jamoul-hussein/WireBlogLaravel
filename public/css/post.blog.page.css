@@ -9,12 +9,21 @@
     --pink: #EDA4BD
 }
 
-.post-blog-body {
-    width: 100%;
+section {
     height: 100%;
+    width: 100%;
     background-image: linear-gradient(rgba(235, 63, 255, 0.5), rgba(0, 0, 0, 0.97)), url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg&ga=GA1.1.87170709.1707609600&semt=sph") !important;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.account-bar {
+    height: 5% !important;
+}
+
+.post-blog-body {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

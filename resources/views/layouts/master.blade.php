@@ -37,6 +37,16 @@
         </div>
     </aside>
 
-@yield('main')
+
+    <section>
+        <div class="body">
+            <div class="account-bar">
+                <div class="account-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/256/5231/5231498.png">
+                </div>
+            </div>
+            @yield('main')
+        </div>
+    </section>
 </body>
 </html>
