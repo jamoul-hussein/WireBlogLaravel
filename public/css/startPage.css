@@ -80,13 +80,38 @@ body {
 }
 
 .body .account-bar {
-    height: 5%;
+    height: 3%;
     background-color: rgba(92, 87, 105, 0.3);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.body .account-bar .account-icon {
+    height: 80%;
+    width: 5%;
+    border: 4px solid var(--wenge);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    background-color: white;
+}
+
+.body .account-bar .account-icon:hover {
+    background-color: var(--pink);
+}
+
+.body .account-bar .account-icon img {
+    height: 90%;
+    width: 90%;
 }
 
 .body .abstract-blogs-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    height: 50%;
     margin-left: 4rem;
     margin-right: 4rem;
     margin-top: 2rem;
@@ -99,7 +124,7 @@ body {
     flex-direction: column;
     border-width: 0px 0px 4px 0px;
     border-style: solid;
-    height: 85%;
+    height: 80%;
     border-color: var(--wenge);
 }
 

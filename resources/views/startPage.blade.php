@@ -4,7 +4,9 @@
     <section>
         <div class="body">
             <div class="account-bar">
-
+                <div class="account-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/256/5231/5231498.png">
+                </div>
             </div>
             <div class="abstract-blogs-container">
                 @if($abstractBlogs)
