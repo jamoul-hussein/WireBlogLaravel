@@ -45,8 +45,9 @@ class PostBlogsController extends Controller
         $image_blog_id = $this->saveImageLinkIntoImageBlogs()->id;
 
         $abstractBlogs = new AbstractBlogs();
+        $abstractBlogs->name = $this->getBlogTitle();
         $abstractBlogs->description = $this->getBlogTitle();
-        $abstractBlogs->category = $this->getBlogTitle();
+        $abstractBlogs->category = $this->getBlogCategory();
         $abstractBlogs->concrete_blogs_id = $concrete_blog_id;
         $abstractBlogs->images_blogs_id = $image_blog_id;
         $abstractBlogs->save();
