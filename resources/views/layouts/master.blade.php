@@ -15,7 +15,7 @@
     <aside>
         <div class="sidebar">
             <nav class="sidebar-nav" id="sidebar-nav">
-                <h1 class="text-center">Wire Blog</h1>
+                <h1 class="sidebar-header">Wire Blog</h1>
                 <ul>
                     <li class="sidebar-nav-item active"><a href="/startPage" class="sidebar-nav-link">
                             <i></i>
