@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogPage\ConcreteBlogsController;
 use App\Http\Controllers\PostBlogPage\PostBlogsController;
+use App\Http\Controllers\RegistrationPage\RegistrationController;
 use App\Http\Controllers\StartPageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -38,5 +39,7 @@ Route::get('/blog/{id}', [ConcreteBlogsController::class, 'index']);
 Route::get('/post/blog', [PostBlogsController::class, 'index']);
 
 Route::get('/posts', [PostBlogsController::class, 'update']);
+
+Route::get('/registration', [RegistrationController::class, 'index']);
 
 require __DIR__ . '/auth.php';
