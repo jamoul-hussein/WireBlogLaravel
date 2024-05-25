@@ -1,7 +1,7 @@
-#Wireblog
+# Wireblog
 Wireblog is a blogging platform built using the Laravel framework. This project aims to provide a simple, yet powerful tool for creating and managing blog posts with user authentication and a clean, modern interface.
 
-##Features
+## Features
 - User authentication (registration, login, logout)
 - Create, read, update, and delete (CRUD) blog posts
 - Rich text editor for creating and editing posts
@@ -9,7 +9,7 @@ Wireblog is a blogging platform built using the Laravel framework. This project 
 - Tagging system for categorizing posts
 - Comments section for user interaction
 
-##Requirements
+## Requirements
 - PHP 8
 - Composer
 - Docker (docker-compose)
